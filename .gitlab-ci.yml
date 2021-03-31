@@ -1,0 +1,10 @@
+before_script:
+  - uname -a
+  - export PATH="/home/hhoegl/miniconda3/bin:$PATH"
+  - sphinx-quickstart --version
+
+sphinx-documentation:
+  script:
+    - make html
+  only:
+    - testing
